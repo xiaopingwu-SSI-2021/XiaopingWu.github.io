@@ -1,0 +1,66 @@
+---
+title: "**Xiaoping's CV**"
+output: html_document
+---
+
+![ ](2.jpeg){width=50%}
+
+# **PROFILE**  
+Postdoc in **bioinformatics** currently. I am now mainly contributing to research on 
+
+*  Genome wide association analysis focus on pregnancy-related outcomes (birthweight and gestational duration) and selected childhood diseases  
+*  Polygenic risk score estimation
+*  Logistic regression analysis on Neuropsychiatric disorders  
+  
+PhD and 5 years postdoc experience in **Quantitative Genetics and Genomics**. I was mainly contributing to research focusing on  
+
+*  Quantitative genetics and genomics  
+*  Population genetics  
+*  Statistical genetics  
+  
+I can offer  
+
+* Years of experience on bioinformatics and post-GWAS analysis  
+* Years of experience research within the field of genome wide association analysis and genomic prediction  
+* Knowledge about different statistical genetics models - linear mixed model, Bayesian model and logistic regression model, and experience of using different softwares, including R for these models  
+* Experience in handling large data set, such as whole genome sequence data and different density of SNP-chip data   
+* Rich experience with R language under Linux environment. I am also familiar with Python   
+* Rich experience with Snakemake for reproducible research  
+  
+I thrive in diverse, team-based environments, and comfortable with leading and being led. 
+
+# **MAIN RESEARCH CONTENT**
+* By using a modified linear mixed-model approach, a genome wide association analysis for feet and legs  
+disorders, young stock survival with imputed whole-genome sequence variants have been performed in cattle  
+* By checking common haplotypes that never occur in the homozygous state in live animals, some recessive lethal haplotypes have been detected for responsible for early embryonic lethality detected in cattle.  
+* Investigated the efficiency of two-trait Bayesian variable selection model and two-trait genomic best linear unbiased prediction model combines with genome-wide association analysis information in genomic prediction.  
+* By using genomic best linear unbiased prediction model and a Bayesian mixture model, the perform of genome wide association analysis were compared for 3 different SNP-chip based marker dataset.  
+* By using genomic best linear unbiased prediction model and a Bayesian mixture model, I investigated reliability of genomic prediction in various scenarios with regard to relationship between test and training animals and between animals within the training data set.  
+* By using a least absolute shrinkage and selection operator, a genome wide association analysis has been conducted for body conformation traits in cattle.  
+
+# **WORJING AND EDUCATION EXPERIENCE**
+* 2020- Vice director, Shijiazhuang, ZhongNongTongChuang (ZNTC) Bio-Technology Co., LTD, Hebei Province, China  
+* 2014 – 2019 Postdoc, Center for Quantitative Genetics and Genomics, Aarhus University, Denmark  
+* 2012 – 2014 Ph.D, Center for Quantitative Genetics and Genomics, Aarhus University, Denmark  
+* 2009 – 2014 successive master-doctor program, Quantitative genetics, China agriculture University, China  
+
+# **RESEARCH FUNDING**
+* Joined the GUDP 2016 funding application for “Reducing calf mortality by identifying lethal genes and improving survival index - LiveCalf “.  
+* Award a scholarship under the State Scholarship Fund in China to pursue my study in Denmark as a joint PhD student from September, 2012 to January, 2014.  
+
+# **TEACHING AND SUPERVISION**
+* Participated course: Teacher Trainning Programm in English from Module 1 – 4. Aarhus University, August 2016 – January 2017.  
+* As Teaching assistant for master and PhD course: QTL mapping. Aarhus University. 2016  
+* As Teaching assistant for bachelor course: Animal breeding. China Agriculture University. 2011.  
+
+# **LANGUAGE**
+* **Chinese**   native  
+* **English**   flent  
+* **Danish**   learning  
+
+# **IT skills**
+* **R programming**   rich experience  
+* **Linux**   rich experience  
+* **snakemake**   experienced  
+* **python**   familiar  
+

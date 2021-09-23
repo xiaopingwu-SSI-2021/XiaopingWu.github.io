@@ -1,0 +1,173 @@
+---
+title: "My **snakemake** notes"
+author: "Xiaoping Wu"
+date: "9/23/2021"
+output: html_document
+---
+
+**Snakemake is a great tool for Reproducible research**
+
+# **Website for learning snakemake**
+
+* snakemake manual: https://snakemake.readthedocs.io/en/stable/index.html  
+* Tutorial for snakemake with R: https://lachlandeer.github.io/snakemake-econ-r-tutorial/index.html  
+
+# **Basic knowledge about snakemake**
+* written as python 3 format
+* Mainly constitutes by:
+  - Configfile: define path  
+  - Wildcards: Minimize repetition, tidy up code. for example: Plink_prefix = glob_wildcards(”genetics/{fname}.bed").fname  
+
+  - Target rule: build several parallel tasks at once  
+  - Analysis rule  
+  - Clean rule   
+  
+## **config file**
+```
+ROOT: "."  
+sub2root: "../../"  
+src: "src/"  
+log: "logs/"  
+out: "out/"  
+```
+
+## **wildcards**
+```
+DATA_SUBSET = glob_wildcards("src/data-specs/subset_{fname}.json").fname  
+PLOTS = glob_wildcards("src/figures/{fname}.R").fname
+```
+
+## **analysis rule**
+constitute mainly: 
+
+* **input**  
+* **output**  
+* **log**   
+* **shell script**: Rscript, shell script, shell commands    
+* **threads**  
+* **resources**    
+* **params**: define certain parameters seperatley from rule boday. it is more often used to define file path    
+* **run**: for python code  
+* **message**: short summary for each running rule  
+* **wrapper**: users popular toos and libraries in snakemake workflow, such as BWA, FASTQ 
+
+### **Example of an analysis rule**
+
+```
+  rule fig_model:
+    input:
+        script = config["figures"] + "{iFigure}.R",
+        data = config["data"] +"mrw_complete.csv",
+        subset = config["data"] + "subset_intermediate.json"
+    output:
+        fig = config["out_figures"]  + "{iFigure}.pdf"
+    params:
+        plink_prefix = config["data"] + "{iFigure}.QC"
+    threads: 1
+    resources:
+        mem_mb=4000,
+        runtime=2:00:00
+    log:
+        err=config["data"] + "figure.err"
+    shell:
+        "Rscript {input.script} \
+            --data {input.data} \
+            --subset {input.subset} \
+            --out {output.fig}"
+```
+
+### **Example of an target rule**
+
+```
+rule run_model:
+    input:
+        expand(config["out_analysis"] + "{iModel}.subset_{iSubset}.rds",iSubset = DATA_SUBSET,iModel = MODELS)
+```
+
+## **Example of Rscript for snakemake**
+
+### **Rscript**
+```
+option_list = list(
+   make_option(c("-d", "--data"),
+               type = "character",
+               default = NULL,
+               help = "a csv file name",
+               metavar = "character"),
+   make_option(c("-m", "--model"),
+               type = "character",
+               default = NULL,
+               help = "a file name containing a regression model",
+               metavar = "character"),
+  	make_option(c("-o", "--out"),
+                type = "character",
+                default = "out.rds",
+                help = "output file name [default = %default]",
+                metavar = "character")
+);
+
+opt_parser = OptionParser(option_list = option_list);
+opt = parse_args(opt_parser);
+
+
+df <- read_csv(opt$data)
+model_structure <- fromJSON(file = opt$model)
+ols_model <- lm(reg_formula, reg_data)
+summary(ols_model)
+```
+
+### **Run Rscript**
+```
+    shell:
+        "Rscript {input.script} \
+            --data {input.data} \
+            --model {input.model} \
+            --subset {input.subset} \
+            --out {output.estimate} \
+            >& {log}"
+```
+
+
+## **Example of shell script for snakemake**
+
+### **shell script**
+```
+#!/usr/bin/env sh
+input=$(realpath $1)
+output=$(realpath $2)
+...
+```
+
+### **Run shell script in snakemake**
+```
+shell:
+  "./{input.shcode} {input.data} {output.results} 1>{log.log} 2>{log.err}"
+```
+
+## **clean rule**
+```
+rule clean:
+    shell:
+        "rm -rf temp/*"
+```
+
+## **help rule**
+```
+rule help:
+    input: "Snakefile"
+    shell:
+        "sed -n 's/^##//p' {input} >help.txt"
+```
+
+# **Other useful commands**
+* Rule Order: it is good practice to put rules that are further along the analysis pipeline higher up the snakefile  
+* **touch**: due to dependencies Between Rules, use “touch” to change timestamps
+* **expand()** function: take a wildcard and replace it with a specific set of values.  
+* **--cores  1**:  define how many cpu  cores to use  
+* **--j 4**: define how many cores to use  
+* **-s** : when your Snakefile is not called “Snakefile”  
+* **--dryrun**:  test if the workflow is defined properly and to estimate the amount of needed computation  
+* **--summary**: to understand the status of the project  
+* **--reason**: Print the reason for each executed rule  
+* **--dag**: show workflow  
+* **--cluster** for submit groups of jobs at backend: “qsub  nodes={thread}, walltime={resources:runtime}”  –j  4

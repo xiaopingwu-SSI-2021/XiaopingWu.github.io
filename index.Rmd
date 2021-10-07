@@ -1,0 +1,25 @@
+---
+title: "**Hi, I am Xiaoping Wu!**"
+output: html_document
+---
+:::: {.columns}
+::: {.column width="60%"}
+![ ](1.jpeg)
+:::
+
+::: {.column width="40%"}
+I'm a postdoc in **bioinformatics**. I am now mainly working on **genetic epidemiology**.
+
+# **CURRENT WORK**
+I am a postdoc in bioinformatics at staten serum institute, Copenhagen, Denmark, working with [Bjarke Feenstra](https://www.ssi.dk/om-ssi/kontakt/medarbejdere/b/bjarke-feenstra-fee) and [Frank Geller](https://www.ssi.dk/om-ssi/kontakt/medarbejdere/f/frank-geller-fge). My job is focusing on pregnancy-related outcomes (birthweight and gestational duration) and selected childhood diseases by using genome-wide association analysis and bioinformatics.
+
+[Read more about my work...](about.html)
+
+# **PERSONALITY**
+I am from China, and currently live in Denmark.   
+  
+I am passion with cooking together with friends.   
+To stay in shape, I am running 2 times a week.    
+I am great fan of novels, mainly fantasy and romantic novels.   
+:::
+::::

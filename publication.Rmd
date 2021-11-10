@@ -6,6 +6,7 @@ output: html_document
 # **Journal articles**
 [**FULL LIST**](https://scholar.google.com/citations?view_op=list_works&hl=da&user=Shrk3ckAAAAJ)  
 
+* Dan Hao, ..., Xiaoping Wu et al. Overview of Metabolomic Analysis and the Integration with Multi-Omics for Economic Traits in Cattle. [Open access](https://www.mdpi.com/2218-1989/11/11/753)
 * Xiaoping Wu, et al. Novel haplotypes responsible for prenatal death in Nordic Red and Danish Jersey cattle. J Dairy Sci. 2020. [Open access](https://www.sciencedirect.com/science/article/pii/S0022030220302162)  
 * Xiaoping Wu, et al. Haplotypes responsible for early embryonic lethality detected in Nordic Holsteins. J Dairy Sci. 2019. [Open access](https://pubmed.ncbi.nlm.nih.gov/31548059/)   
 * Xiaoping Wu, et al. Association analysis for young stock survival index with imputed whole-genome sequence variants in Nordic Holstein cattle. J Dairy Sci. 2017. [Open access](https://www.sciencedirect.com/science/article/pii/S0022030217305301)  

@@ -8,9 +8,11 @@ output: html_document
 # **PROFILE**  
 Postdoc in **bioinformatics** currently. I am now mainly contributing to research on 
 
-*  Genome wide association analysis focus on pregnancy-related outcomes (birthweight and gestational duration) and selected childhood diseases  
-*  Polygenic risk score estimation
-*  Logistic regression analysis on Neuropsychiatric disorders  
+*  Genome wide association analysis (GWAS) focus on pregnancy-related outcomes (birthweight and gestational duration) and selected childhood diseases  
+*  Polygenic risk score estimation for different traits
+*  Logistic regression analysis on polygenic risk score and Neuropsychiatric disorders
+*  Mendelian randomization for figuring the relationship between of offspring Birth weight and mental disorder by using polygenic risk score based on offspring/mother GWAS results
+*  Integrate Single-cell RNA sequencing data with GWAS results to distinguishes disease association cells
   
 PhD and 5 years postdoc experience in **Quantitative Genetics and Genomics**. I was mainly contributing to research focusing on  
 
@@ -20,7 +22,7 @@ PhD and 5 years postdoc experience in **Quantitative Genetics and Genomics**. I 
   
 I can offer  
 
-* Years of experience on bioinformatics and post-GWAS analysis  
+* Years of experience on bioinformatics and post-GWAS. 
 * Years of experience research within the field of genome wide association analysis and genomic prediction  
 * Knowledge about different statistical genetics models - linear mixed model, Bayesian model and logistic regression model, and experience of using different softwares, including R for these models  
 * Experience in handling large data set, such as whole genome sequence data and different density of SNP-chip data   
@@ -29,7 +31,7 @@ I can offer
   
 I thrive in diverse, team-based environments, and comfortable with leading and being led. 
 
-# **MAIN RESEARCH CONTENT**
+# **Early RESEARCH CONTENT**
 * By using a modified linear mixed-model approach, a genome wide association analysis for feet and legs  
 disorders, young stock survival with imputed whole-genome sequence variants have been performed in cattle  
 * By checking common haplotypes that never occur in the homozygous state in live animals, some recessive lethal haplotypes have been detected for responsible for early embryonic lethality detected in cattle.  
